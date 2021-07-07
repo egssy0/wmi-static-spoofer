@@ -10,11 +10,10 @@ typedef struct _VendorInfo
 
 typedef struct _HDD_EXTENSION
 {
-	char pad_0x0000[0x60];
+	char pad_0x0000[0x68];
 	VendorInfo* pVendorInfo;
 	char pad_0x0068[0x8];
 	char* pHDDSerial;
-	char pad_0x0078[0x30];
 } HDD_EXTENSION, *PHDD_EXTENSION;
 
 typedef __int64(__fastcall *RaidUnitRegisterInterfaces)(PHDD_EXTENSION a1);
